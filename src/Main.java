@@ -3,6 +3,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
+
         //Task 1
         int[] numbers = new int[3];
         numbers[0] = 1;
@@ -31,7 +32,6 @@ public class Main {
 
         System.out.println(Arrays.toString(doubleNumbers));
 
-
         int lastIndex = names.length - 1;
         int index = 0;
 
@@ -51,21 +51,23 @@ public class Main {
             }
         }
 
-        int size = doubleNumbers.length;
-        double[] copyDoubleNumbers = new double[size];
-        for(int indexOf = 0; indexOf < size; indexOf++){
-            copyDoubleNumbers[indexOf] = doubleNumbers[size-1];
-            size--;
+
+        for(int i = doubleNumbers.length-1; i >= 0; i--) {
+            System.out.print(doubleNumbers[i]);
+            if(i != 0){
+                System.out.print(", ");
+            }
         }
-        System.out.println(Arrays.toString(copyDoubleNumbers));
+        System.out.println();
 
 
-        index = lastIndex;
-        do{
-            System.out.print(names[index] + ", ");
-            index--;
-        } while(index > 0);
-        System.out.println(names[index]+"\n");
+        for(int i = names.length-1; i >= 0; i--) {
+            if (i > 0) {
+                System.out.print(names[i] + ", ");
+            } else {
+                System.out.println(names[i]);
+            }
+        }
 
 
         //Task 4
